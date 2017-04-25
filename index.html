@@ -339,10 +339,10 @@ Optionally there can be success, error and warning parameters.</p>
 <h2 id="start-chat">Start chat</h2>
 
 <blockquote>
-<p>Example requests structure:</p>
+<p>Example events request structure:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"requests"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="s2">"events"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"chat_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hash"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"event_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"start_chat"</span><span class="p">,</span><span class="w">
@@ -492,10 +492,10 @@ Optionally there can be success, error and warning parameters.</p>
 <h2 id="postback-request">Postback request</h2>
 
 <blockquote>
-<p>Request structure:</p>
+<p>Events request structure:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"request"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="s2">"events"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"chat_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hash"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"event_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"postback"</span><span class="p">,</span><span class="w">
@@ -566,10 +566,10 @@ When that button is clicks the content of <strong>data.payload</strong> needs to
 <h2 id="regular-message">Regular message</h2>
 
 <blockquote>
-<p>Request structure:</p>
+<p>Events request structure:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"requests"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="s2">"events"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"chat_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hash"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"event_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"message"</span><span class="p">,</span><span class="w">
@@ -601,10 +601,10 @@ When that button is clicks the content of <strong>data.payload</strong> needs to
 <h2 id="buttons">Buttons</h2>
 
 <blockquote>
-<p>Request structure:</p>
+<p>Events request structure:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"requests"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="s2">"events"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"chat_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hash"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"event_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"postback"</span><span class="p">,</span><span class="w">
