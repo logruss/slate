@@ -99,11 +99,11 @@ There are `event_type` to identify the chat requests:
 # Chat
 ## Start chat
 
-> Example requests structure:
+> Example events request structure:
 
 ```json
 {
-  "requests": [
+  "events": [
     {
       "chat_id": "hash",
       "event_type": "start_chat",
@@ -194,11 +194,11 @@ image_url                        | string  | Display on top if available
 
 ## Postback request 
 
-> Request structure:
+> Events request structure:
 
 ```json
 {
-  "request": [
+  "events": [
     {
       "chat_id": "hash",
       "event_type": "postback",
@@ -270,11 +270,11 @@ When that button is clicks the content of **data.payload** needs to be **POST ba
 
 ## Regular message
 
-> Request structure:
+> Events request structure:
 
 ```json
 {
-  "requests": [
+  "events": [
     {
       "chat_id": "hash",
       "event_type": "message",
@@ -308,11 +308,11 @@ When the [event_type](#event-types) is **message** a regular text message is dis
 
 ## Buttons
 
-> Request structure:
+> Events request structure:
 
 ```json
 {
-  "requests": [
+  "events": [
     {
       "chat_id": "hash",
       "event_type": "postback",
