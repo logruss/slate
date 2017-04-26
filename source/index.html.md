@@ -99,7 +99,7 @@ There are `event_type` to identify the chat requests:
 # Chat
 ## Start chat
 
-> Example events request structure:
+> Example events request structure from chat server:
 
 ```json
 {
@@ -113,7 +113,10 @@ There are `event_type` to identify the chat requests:
         "phone": "+4400000000000"
       }
     }
-  ]
+  ],
+  "meta": {
+      "operator_available": true
+    }
 }
 ```
 
@@ -194,7 +197,7 @@ image_url                        | string  | Display on top if available
 
 ## Postback request 
 
-> Events request structure:
+> Events request structure from chat server:
 
 ```json
 {
@@ -206,7 +209,10 @@ image_url                        | string  | Display on top if available
         "payload": "{\"class\":\"CategoriesListPostback\"}"
       }
     }
-  ]
+  ],
+  "meta": {
+    "operator_available": true
+  }
 }
 ```
 
@@ -270,7 +276,7 @@ When that button is clicks the content of **data.payload** needs to be **POST ba
 
 ## Regular message
 
-> Events request structure:
+> Events request structure from chat server:
 
 ```json
 {
@@ -282,11 +288,14 @@ When that button is clicks the content of **data.payload** needs to be **POST ba
         "text": "Hello"
       }
     }
-  ]
+  ],
+  "meta": {
+    "operator_available": true
+  }
 }
 ```
 
-> Structure that will be send to the chat server:
+> Response:
 
 ```json
 {
@@ -295,9 +304,28 @@ When that button is clicks the content of **data.payload** needs to be **POST ba
     {
       "code": 1020,
       "state": "auto",
-      "message": "Message send",
+      "message": "Message received",
       "debug_message": "message text missing.",
       "debug_id": 213124
+    }
+  ]
+}
+```
+
+> Structure that will be send to the chat server with separate request
+
+```json
+{
+  "data": [
+    {
+      "chat_id": "hash",
+      "state": "auto",
+      "event_type": "message",
+      "elements": [
+        {
+          "text": "Hello"
+        }
+      ]
     }
   ]
 }
@@ -308,7 +336,7 @@ When the [event_type](#event-types) is **message** a regular text message is dis
 
 ## Buttons
 
-> Events request structure:
+> Events request structure from chat server:
 
 ```json
 {
@@ -320,7 +348,10 @@ When the [event_type](#event-types) is **message** a regular text message is dis
         "payload": "{\"class\":\"BottonExamplePostback\"}"
       }
     }
-  ]
+  ],
+  "meta": {
+    "operator_available": true
+  }
 }
 ```
 
