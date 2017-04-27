@@ -3,6 +3,7 @@ title: Chat API Reference
 
 language_tabs:
   - json
+  - shell
 
 toc_footers:
   - <a href='#'>First Online Solutions</a>
