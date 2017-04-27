@@ -357,7 +357,25 @@ Optionally there can be success, error and warning parameters.</p>
       </span><span class="s2">"operator_available"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
+</span></code></pre><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  <span class="o">{{</span>BASE_URL<span class="o">}}</span>/v2/system/chat <span class="se">\</span>
+  -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'postman-token: 05f4290c-7075-3edc-190a-71b96c1c266e'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+  "events": [
+    {
+      "chat_id": "hash",
+      "event_type": "start_chat",
+      "data": {
+        "name": "John Smith",
+        "email": "john.smith@example.com",
+        "phone": "+4400000000000"
+      }
+    }
+  ]
+}'</span>
+</code></pre>
 <blockquote>
 <p>Structure that will be send to the chat server:</p>
 </blockquote>
@@ -511,7 +529,23 @@ Optionally there can be success, error and warning parameters.</p>
     </span><span class="s2">"operator_available"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
+</span></code></pre><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  <span class="o">{{</span>BASE_URL<span class="o">}}</span>/v2/system/chat <span class="se">\</span>
+  -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'postman-token: d87ac2ec-9ff4-d28b-e08f-f1cf1b7abfe8'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+  "events": [
+    {
+      "chat_id": "1231231231",
+      "event_type": "postback",
+      "data": {
+        "payload": "{\"class\":\"CategoriesListPostback\"}"
+      }
+    }
+  ]
+}'</span>
+</code></pre>
 <blockquote>
 <p>Structure that will be send to the chat server:</p>
 </blockquote>
@@ -588,7 +622,23 @@ When that button is clicks the content of <strong>data.payload</strong> needs to
     </span><span class="s2">"operator_available"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
+</span></code></pre><pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  <span class="o">{{</span>BASE_URL<span class="o">}}</span>/v2/system/chat <span class="se">\</span>
+  -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'postman-token: 05345cc4-2927-ac96-11f9-4caa6cc562d5'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+  "events": [
+    {
+      "chat_id": "ha123123sh",
+      "event_type": "message",
+      "data": {
+        "text": "Hello"
+      }
+    }
+  ]
+}'</span>
+</code></pre>
 <blockquote>
 <p>Response:</p>
 </blockquote>
