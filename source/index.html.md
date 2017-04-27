@@ -120,6 +120,27 @@ There are `event_type` to identify the chat requests:
 }
 ```
 
+```shell
+curl -X POST \
+  {{BASE_URL}}/v2/system/chat \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 05f4290c-7075-3edc-190a-71b96c1c266e' \
+  -d '{
+  "events": [
+    {
+      "chat_id": "hash",
+      "event_type": "start_chat",
+      "data": {
+        "name": "John Smith",
+        "email": "john.smith@example.com",
+        "phone": "+4400000000000"
+      }
+    }
+  ]
+}'
+```
+
 > Structure that will be send to the chat server:
 
 ```json
@@ -216,6 +237,25 @@ image_url                        | string  | Display on top if available
 }
 ```
 
+```shell
+curl -X POST \
+  {{BASE_URL}}/v2/system/chat \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: d87ac2ec-9ff4-d28b-e08f-f1cf1b7abfe8' \
+  -d '{
+  "events": [
+    {
+      "chat_id": "1231231231",
+      "event_type": "postback",
+      "data": {
+        "payload": "{\"class\":\"CategoriesListPostback\"}"
+      }
+    }
+  ]
+}'
+```
+
 > Structure that will be send to the chat server:
 
 ```json
@@ -293,6 +333,25 @@ When that button is clicks the content of **data.payload** needs to be **POST ba
     "operator_available": true
   }
 }
+```
+
+```shell
+curl -X POST \
+  {{BASE_URL}}/v2/system/chat \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 05345cc4-2927-ac96-11f9-4caa6cc562d5' \
+  -d '{
+  "events": [
+    {
+      "chat_id": "ha123123sh",
+      "event_type": "message",
+      "data": {
+        "text": "Hello"
+      }
+    }
+  ]
+}'
 ```
 
 > Response:
