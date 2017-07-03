@@ -100,8 +100,6 @@ There are `event_type` to identify the chat requests:
 # Chat
 ## Start chat
 
-> Example events request structure from chat server:
-
 ```json
 {
   "events": [
@@ -216,6 +214,49 @@ image_url                        | string  | Display on top if available
 **Response visualization**
 
 [![N|GetStartedVisual](http://files.dxr.cloud/bOW1wle4gbUEmlBQuWyIV8J9CT2PtNXJFF7PycI74TepOKGbJi9n5Ils2WuS)](http://files.dxr.cloud/bOW1wle4gbUEmlBQuWyIV8J9CT2PtNXJFF7PycI74TepOKGbJi9n5Ils2WuS)
+
+## Pass through chat
+
+> Example events request structure from chat server:
+
+> Pass trough chat is used when the bot is a gateway between other chat services.
+
+```json
+{
+  "events": [
+    {
+      "chat_id": "hash",
+      "event_type": "pass_through",
+      "elements": [
+        {
+          "text": "Hello"
+        }
+      ]
+    }
+  ],
+  "meta": {
+      "operator_available": true
+    }
+}
+```
+> Response from chat server:
+
+```json
+{
+  "events": [
+    {
+      "chat_id": "hash",
+      "event_type": "pass_through",
+      "data": {
+        "text": "Hello"
+      }
+    }
+  ],
+  "meta": {
+    "operator_available": true
+  }
+}
+```
 
 ## Postback request 
 
