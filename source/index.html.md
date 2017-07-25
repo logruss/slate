@@ -434,6 +434,25 @@ curl -X POST \
 
 When the [event_type](#event-types) is **message** a regular text message is displayed to the client.
 
+## End chat
+Ending the chat session.
+
+> Events request structure from chat server:
+
+```json
+{
+  "events": [
+    {
+      "chat_id": "hash",
+      "event_type": "end_chat",
+      "state": "auto"
+    }
+  ]
+}
+```
+> Response
+
+No response is needed
 
 ## Buttons
 
