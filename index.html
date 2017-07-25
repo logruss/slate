@@ -714,6 +714,29 @@ When that button is clicks the content of <strong>data.payload</strong> needs to
 </span></code></pre>
 <p>When the <a href="#event-types">event_type</a> is <strong>message</strong> a regular text message is displayed to the client.</p>
 
+<h2 id="end-chat">End chat</h2>
+
+<p>Ending the chat session.</p>
+
+<blockquote>
+<p>Events request structure from chat server:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"events"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"chat_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hash"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"event_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"end_chat"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"auto"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Response</p>
+</blockquote>
+
+<p>No response is needed</p>
+
 <h2 id="buttons">Buttons</h2>
 
 <blockquote>
