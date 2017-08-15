@@ -106,6 +106,8 @@ There are `event_type` to identify the chat requests:
     {
       "chat_id": "hash",
       "event_type": "start_chat",
+      "state": "auto",
+      "device": "desktop",
       "data": {
         "name": "John Smith",
         "email": "john.smith@example.com",
@@ -130,6 +132,8 @@ curl -X POST \
     {
       "chat_id": "hash",
       "event_type": "start_chat",
+      "state": "auto",
+      "device": "desktop",
       "data": {
         "name": "John Smith",
         "email": "john.smith@example.com",
@@ -147,7 +151,7 @@ curl -X POST \
   "data": [
     {
       "chat_id": "hash",
-      "state": "auto",
+      "state": "auto", 
       "event_type": "template",
       "template_type": "generic",
       "elements": [
@@ -195,6 +199,7 @@ Parameter                  | Type    | Description
 ---------                  | ------- | -----------
 [event_type](#event-types) | string  | Type of the event (**required**)
 chat_id                    | string  | Id of the initialized chat (**required**)
+device                     | string  | It can be either desktop or mobile (**required**)
 name                       | string  | Client name if available (**optional**)
 email                      | string  | Client email if available (**optional**)
 phone                      | string  | Client phone if available (**optional**)
@@ -227,6 +232,8 @@ image_url                        | string  | Display on top if available
     {
       "chat_id": "hash",
       "event_type": "pass_through",
+      "state": "auto",
+      "device": "desktop",
       "elements": [
         {
           "text": "Hello"
@@ -239,7 +246,7 @@ image_url                        | string  | Display on top if available
     }
 }
 ```
-> Response from chat server:
+> Response to chat server:
 
 ```json
 {
@@ -268,6 +275,8 @@ image_url                        | string  | Display on top if available
     {
       "chat_id": "hash",
       "event_type": "postback",
+      "state": "auto",      
+      "device": "desktop",     
       "data": {
         "payload": "{\"class\":\"CategoriesListPostback\"}"
       }
@@ -290,6 +299,8 @@ curl -X POST \
     {
       "chat_id": "1231231231",
       "event_type": "postback",
+      "state": "auto",      
+      "device": "desktop",
       "data": {
         "payload": "{\"class\":\"CategoriesListPostback\"}"
       }
@@ -366,6 +377,8 @@ When that button is clicks the content of **data.payload** needs to be **POST ba
     {
       "chat_id": "hash",
       "event_type": "message",
+      "state": "auto",      
+      "device": "desktop",      
       "data": {
         "text": "Hello"
       }
@@ -388,6 +401,8 @@ curl -X POST \
     {
       "chat_id": "ha123123sh",
       "event_type": "message",
+      "state": "auto",      
+      "device": "desktop",      
       "data": {
         "text": "Hello"
       }
@@ -445,7 +460,8 @@ Ending the chat session.
     {
       "chat_id": "hash",
       "event_type": "end_chat",
-      "state": "auto"
+      "state": "auto",      
+      "device": "desktop"
     }
   ]
 }
@@ -464,6 +480,8 @@ No response is needed
     {
       "chat_id": "hash",
       "event_type": "postback",
+      "state": "auto",      
+      "device": "desktop",      
       "data": {
         "payload": "{\"class\":\"BottonExamplePostback\"}"
       }
