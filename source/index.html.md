@@ -116,7 +116,7 @@ There are `event_type` to identify the chat requests:
     }
   ],
   "meta": {
-      "operator_available": true,
+      "operators_available": true,
       "chat_session_url": "http://chat.url/session/123"
     }
 }
@@ -243,7 +243,7 @@ image_url                        | string  | Display on top if available
     }
   ],
   "meta": {
-      "operator_available": true,
+      "operators_available": true,
       "chat_session_url": "http://chat.url/session/123"
     }
 }
@@ -262,7 +262,7 @@ image_url                        | string  | Display on top if available
     }
   ],
   "meta": {
-    "operator_available": true,
+    "operators_available": true,
     "chat_session_url": "http://chat.url/session/123"
   }
 }
@@ -286,7 +286,7 @@ image_url                        | string  | Display on top if available
     }
   ],
   "meta": {
-    "operator_available": true,
+    "operators_available": true,
     "chat_session_url": "http://chat.url/session/123"
   }
 }
@@ -389,7 +389,7 @@ When that button is clicks the content of **data.payload** needs to be **POST ba
     }
   ],
   "meta": {
-    "operator_available": true,
+    "operators_available": true,
     "chat_session_url": "http://chat.url/session/123"
   }
 }
@@ -493,7 +493,7 @@ No response is needed
     }
   ],
   "meta": {
-    "operator_available": true,
+    "operators_available": true,
     "chat_session_url": "http://chat.url/session/123"
   }
 }
